@@ -1,0 +1,139 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0 0 100px 0;
+}
+
+header {
+  nav {
+    background-color: #f9f9f9;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    img {
+      display: inline-block;
+      float: left;
+      width: 12%;
+      margin: 0 20px;
+    }
+
+    ul {
+      padding: 15px;
+      font-size: 16px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      li {
+        display: inline;
+        list-style: none;
+        padding-right: 50px;
+
+        a {
+          color: #404852;
+          transition: ease all .3s;
+          text-decoration: none;
+          padding: 10px 15px;
+          outline: none;
+
+          &:hover {
+            color: #2c6322;
+            background-color: #dcdcdc;
+            padding: 10px 15px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.brand-cover {
+  background-image: linear-gradient(
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+  ),url("../imgs/background-cover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    font-size: 70px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+
+    span {
+      color: #2c6322;
+    }
+  }
+
+  h1 {
+    font-size: 37px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+footer {
+
+  .footer-description {
+    float: left;
+    z-index: 1;
+    display: inline-block;
+    margin-left: 50px;
+    color: #ffffff;
+
+    img {
+      display: block;
+      width: 18%;
+      margin: 0 20px;
+    }
+
+    p {
+      display: block;
+    }
+  }
+
+  nav {
+    height: 200px;
+    width: 100%;
+    color: #6d7a8b;
+    padding-top: 50px;
+    font-size: 14px;
+    background: #404852;
+    transition-duration: .3s;
+    -webkit-box-shadow: 0 2px 10px rgba(109,122,139,.1);
+    box-shadow: 0 2px 10px rgba(109,122,139,.1);
+    -webkit-backface-visibility: hidden;
+
+    ul {
+      padding: 15px 50px 15px 15px;
+      font-size: 16px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      li {
+        display: inline;
+        list-style: none;
+        padding-left: 50px;
+      }
+      li:first-child {
+        padding-left: 0px;
+      }
+    }
+  }
+}
