@@ -1,5 +1,10 @@
+let jumpToTop = document.getElementById('jump-to-top');
+jumpToTop.style.visibility = "hidden";
+
 window.onscroll = function(e) {
-    // print "false" if direction is down and "true" if up
-    console.log(this.oldScroll > this.scrollY);
-    this.oldScroll = this.scrollY;
+    if (this.scrollY > 40) {
+        jumpToTop.style.visibility = "";
+    } else {
+        jumpToTop.style.visibility = "hidden";
+    }
 };

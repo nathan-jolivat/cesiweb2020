@@ -1,7 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Poppins', sans-serif;
   padding: 0;
-  margin: 0 0 100px 0;
+  margin: 0;
 }
 header nav {
   background-color: #f9f9f9;
@@ -11,10 +14,14 @@ header nav {
   top: 0;
   width: 100%;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 28px 51px -38px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 28px 51px -38px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 28px 51px -38px rgba(0, 0, 0, 0.2);
 }
 header nav img {
-  display: inline-block;
-  float: left;
   width: 12%;
   margin: 0 20px;
 }
@@ -22,9 +29,6 @@ header nav ul {
   padding: 15px;
   font-size: 16px;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
 header nav ul li {
   display: inline;
@@ -43,6 +47,25 @@ header nav ul li a:hover {
   background-color: #dcdcdc;
   padding: 10px 15px;
   border-radius: 5px;
+}
+#jump-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  background-color: #2c6322;
+  color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#jump-to-top i {
+  transition: all ease-in 0.2s;
+}
+#jump-to-top:hover i {
+  transform: translateY(-5px);
 }
 .brand-cover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../imgs/background-cover.jpg");
@@ -70,46 +93,112 @@ header nav ul li a:hover {
   padding: 0;
   margin: 0;
 }
-footer .footer-description {
-  float: left;
-  z-index: 1;
-  display: inline-block;
-  margin-left: 50px;
+#features h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+#features h3 {
+  text-align: center;
+  font-size: 15px;
+  line-height: 0.2;
+  font-weight: 100;
+}
+#features .skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 100px 0;
+}
+#features .skills div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#features .skills div i {
+  background-color: #2c6322;
+  border-radius: 50%;
   color: #ffffff;
+  padding: 30px;
+  font-size: 50px;
+  transition: all ease 0.3s;
+  -webkit-box-shadow: 0px 4px 19px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 19px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 19px -8px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+#features .skills div i:hover {
+  transform: translateY(-10px);
+}
+#features .skills div span {
+  padding-top: 20px;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  background-color: #404852;
+}
+footer .footer-description {
+  z-index: 1;
+  padding-left: 50px;
+  color: #ffffff;
+  background-color: #404852;
+  font-size: 13px;
+  max-width: 500px;
 }
 footer .footer-description img {
   display: block;
-  width: 18%;
-  margin: 0 20px;
+  width: 30%;
+  margin: 0 20px 30px;
 }
 footer .footer-description p {
   display: block;
 }
-footer nav {
+footer .footer-nav {
+  background-color: inherit;
+  padding-left: 200px;
+}
+footer .footer-nav p {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+footer .footer-nav nav {
   height: 200px;
   width: 100%;
   color: #6d7a8b;
-  padding-top: 50px;
   font-size: 14px;
-  background: #404852;
+  background-color: inherit;
   transition-duration: 0.3s;
-  -webkit-box-shadow: 0 2px 10px rgba(109, 122, 139, 0.1);
-  box-shadow: 0 2px 10px rgba(109, 122, 139, 0.1);
-  -webkit-backface-visibility: hidden;
 }
-footer nav ul {
-  padding: 15px 50px 15px 15px;
+footer .footer-nav nav ul {
+  padding: 15px 50px 15px 0;
   font-size: 16px;
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-footer nav ul li {
+footer .footer-nav nav ul a {
+  color: #404852;
+  transition: ease all 0.3s;
+  text-decoration: none;
+  padding: 10px 15px;
+  outline: none;
+}
+footer .footer-nav nav ul a:hover {
+  color: #2c6322;
+  background-color: #dcdcdc;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+footer .footer-nav nav ul li {
   display: inline;
   list-style: none;
   padding-left: 50px;
 }
-footer nav ul li:first-child {
+footer .footer-nav nav ul li:first-child {
   padding-left: 0px;
 }
