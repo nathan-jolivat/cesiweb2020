@@ -121,9 +121,17 @@ header {
   grid-template-rows: 100vh;
 
   #contact-form {
-    grid-column-start: col-start 0;
-    padding: 100px 70px;
-    width: 100%;
+    grid-column-start: 1;
+
+    @media screen and (min-width:1351px) {
+      padding: 100px 150px 30px 70px;
+    }
+    @media screen and (min-width:1000px) and (max-width:1350px) {
+      padding: 100px 150px 30px 70px;
+    }
+    @media screen and (max-width: 999px) {
+      padding: 100px 70px 30px 70px;
+    }
 
     h1 {
       font-size: 40px;
@@ -177,7 +185,17 @@ header {
       }
     }
 
+    .error-notice {
+      font-size: 12px;
+      color: rgba(255, 84, 88, 0.84);
+    }
+
+    .errors-list {
+      font-size: 12px;
+      color: rgba(255, 84, 88, 0.84);
+    }
   }
+
   .side-cover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../imgs/side-background.jpg");
     background-size: cover;
@@ -188,7 +206,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    grid-column-start: col-start 1;
+    grid-column-start: 2;
 
     p {
       font-size: 50px;
@@ -292,9 +310,10 @@ footer {
   .footer-nav {
     background-color: inherit;
     padding-left: 200px;
+    color: #ffffff;
 
     p {
-      color: white;
+      color: #ffffff;
       font-weight: bold;
       font-size: 25px;
     }
@@ -302,7 +321,7 @@ footer {
     nav {
       height: 200px;
       width: 100%;
-      color: #6d7a8b;
+      color: #ffffff;
       font-size: 14px;
       background-color: inherit;
       transition-duration: .3s;
@@ -316,7 +335,7 @@ footer {
         justify-content: flex-end;
 
         a {
-          color: #404852;
+          color: #e1e1e1;
           transition: ease all .3s;
           text-decoration: none;
           padding: 10px 15px;

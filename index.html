@@ -17,84 +17,88 @@
 
         <link rel="stylesheet" href="./static/css/main.css">
 
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     </head>
 
     <body>
-        <header id="top">
-            <nav>
-                <img src="./static/imgs/logo.png" alt="Logo Madera Constructions" class="nav-logo">
-                <ul>
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="#features">Notre expertise</a></li>
-                    <li><a href="/nous-contacter">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <a href="#top">
-            <div id="jump-to-top">
-                <i class="ti ti-arrow-up"></i>
-            </div>
-        </a>
-
-        <main>
-            <section class="brand-cover">
-                <p><span>Madera</span> constructions</p>
-                <h1>Votre partenaire pour votre maison modulaire</h1>
-            </section>
-
-            <section id="features">
-                <h2>Notre expertise</h2>
-                <h3>Nous vous accompagnons tout au long de votre projet de maison, avec nos valeurs qui nous tiennent à coeur</h3>
-                <div class="skills">
-                    <div>
-                        <i class="ti ti-panel"></i>
-                        <span>Ajustez à tout moment</span>
-                    </div>
-                    <div>
-                        <i class="ti ti-ruler-pencil"></i>
-                        <span>Plans sur mesure</span>
-                    </div>
-                    <div>
-                        <i class="ti ti-ruler-alt"></i>
-                        <span>Précisions au millimètre</span>
-                    </div>
-                    <div>
-                        <i class="ti ti-package"></i>
-                        <span>Livraison rapide</span>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <section class="footer-description">
-                <img src="./static/imgs/logo.png" alt="Logo Madera Constructions" class="nav-logo">
-                <p>
-                    Le concept MADERA est orienté vers des solutions modulaires innovantes et offre des
-                    réalisations uniques de bâtiments architecturés en bois.
-                </p>
-                <p>Avec MADERA, vos bâtiments sont personnalisables et innovants.</p>
-                <p>
-                    Tous les avantages du modulaire sont réunis avec en plus la qualité et le confort
-                    d’un bâtiment thermiquement performant.
-                </p>
-                <p>
-                    Les modulaires MADERA s’adaptent à tous vos projets.
-                </p>
-            </section>
-            <section class="footer-nav">
-                <p>Liens utiles</p>
+        <div id="app">
+            <header id="top">
                 <nav>
+                    <img src="./static/imgs/logo.png" alt="Logo Madera Constructions" class="nav-logo">
                     <ul>
-                        <li>Accueil</li>
-                        <li>Notre expertise</li>
-                        <li>Contact</li>
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="#features">Notre expertise</a></li>
+                        <li><a href="/nous-contacter">Contact</a></li>
                     </ul>
                 </nav>
-            </section>
-        </footer>
+            </header>
 
-        <script src="./static/js/app.js"></script>
+            <a href="#top">
+                <div id="jump-to-top">
+                    <i class="ti ti-arrow-up"></i>
+                </div>
+            </a>
+
+            <main>
+                <section class="brand-cover">
+                    <p><span>Madera</span> constructions</p>
+                    <h1>Votre partenaire pour votre maison modulaire</h1>
+                </section>
+
+                <section id="features">
+                    <h2>Notre expertise</h2>
+                    <h3>Nous vous accompagnons tout au long de votre projet de maison, avec nos valeurs qui nous tiennent à coeur</h3>
+                    <div class="skills">
+                        <div>
+                            <i class="ti ti-panel"></i>
+                            <span>Ajustez à tout moment</span>
+                        </div>
+                        <div>
+                            <i class="ti ti-ruler-pencil"></i>
+                            <span>Plans sur mesure</span>
+                        </div>
+                        <div>
+                            <i class="ti ti-ruler-alt"></i>
+                            <span>Précisions au millimètre</span>
+                        </div>
+                        <div>
+                            <i class="ti ti-package"></i>
+                            <span>Livraison rapide</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <section class="footer-description">
+                    <img src="./static/imgs/logo.png" alt="Logo Madera Constructions" class="nav-logo">
+                    <p>
+                        Le concept MADERA est orienté vers des solutions modulaires innovantes et offre des
+                        réalisations uniques de bâtiments architecturés en bois.
+                    </p>
+                    <p>Avec MADERA, vos bâtiments sont personnalisables et innovants.</p>
+                    <p>
+                        Tous les avantages du modulaire sont réunis avec en plus la qualité et le confort
+                        d’un bâtiment thermiquement performant.
+                    </p>
+                    <p>
+                        Les modulaires MADERA s’adaptent à tous vos projets.
+                    </p>
+                </section>
+                <section class="footer-nav">
+                    <p><i class="ti ti-bookmark"></i> Liens utiles</p>
+                    <nav>
+                        <ul>
+                            <li><a href="/">Accueil</a></li>
+                            <li><a href="#features">Notre expertise</a></li>
+                            <li><a href="/nous-contacter">Contact</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </footer>
+        </div>
+            <script src="./static/js/vue.js"></script>
+            <script src="./static/js/app.js"></script>
     </body>
 </html>
