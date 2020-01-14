@@ -8,6 +8,8 @@ const axios = require('axios');
 const port = 3000;
 
 app.use('/static', express.static('assets'));
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
@@ -18,7 +20,12 @@ app.get('/nous-contacter', function(req, res) {
 });
 
 app.post('/contact-request/process', function(req, res) {
-    console.log(req);
+    console.log(req.body.names);
+    console.log(req.body.email);
+    console.log(req.body.subject);
+    console.log(req.body.text);
+
+    //res.redirect('/nous-contacter');
 });
 
 app.listen(port, () => console.log(`Appli démarrée sur le port ${port}!`));

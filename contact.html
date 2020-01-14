@@ -10,9 +10,12 @@
 
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./static/css/themify-icons.css">
+        <link rel="stylesheet" href="./static/css/animate.css">
+
         <link rel="stylesheet" href="./static/css/main.css">
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js"></script>
     </head>
     <body>
         <div id="app">
@@ -37,33 +40,33 @@
                 <section class="contact-wrapper">
                     <section id="contact-form">
                         <h1>Contactez-<span>nous</span></h1>
-                        <form @submit="checkForm" action="http://localhost:3000/contact-request/process" method="post">
+                        <form action="http://localhost:3000/contact-request/process" method="post">
 
-                            <p class="error-notice" v-if="errors.length">
-                                <b>Merci de corriger les erreurs suivantes :</b>
-                            <ul class="errors-list">
-                                <li v-for="error in errors">{{ error }}</li>
-                            </ul>
-                            </p>
+                            <div class="error-notice" v-bind:class="{'animated shake': errors.length }" v-if="errors.length">
+                                <p>Merci de corriger les erreurs suivantes :</p>
+                                <ul class="errors-list">
+                                    <li v-for="error in errors">{{ error }}</li>
+                                </ul>
+                            </div>
 
                             <div>
                                 <label for="names">Votre Prénom & Nom</label>
-                                <input type="text" id="names" v-model="names" placeholder="Votre Prénom & Nom (ex: John Doe)">
+                                <input type="text" id="names" name="names" v-model="names" placeholder="Votre Prénom & Nom (ex: John Doe)">
                             </div>
                             <div>
                                 <label for="names">Votre adresse email</label>
-                                <input type="text" id="email" v-model="email" placeholder="Votre adresse email (ex: j.doe@gmail.com)">
+                                <input type="email" id="email" name="email" v-model="email" placeholder="Votre adresse email (ex: j.doe@gmail.com)">
                             </div>
                             <div>
                                 <label for="names">Sujet de votre message</label>
-                                <input type="text" id="subject" v-model="subject" placeholder="Sujet de votre demande (ex: Problème de facturation)">
+                                <input type="text" id="subject" name="subject" v-model="subject" placeholder="Sujet de votre demande (ex: Problème de facturation)">
                             </div>
                             <div>
                                 <label for="names">Votre demande en détails</label>
-                                <textarea name="" id="" cols="30" v-model="text" rows="6" placeholder="Détaillez ici au mieux votre demande pour qu'on puisse vous répondre au mieux"></textarea>
+                                <textarea name="text" id="" cols="30" v-model="text" rows="6" placeholder="Détaillez ici au mieux votre demande pour qu'on puisse vous répondre au mieux"></textarea>
                             </div>
 
-                            <button type="submit">Envoyer message</button>
+                            <button type="button" v-on:click="checkForm">Envoyer message</button>
                         </form>
                     </section>
 
