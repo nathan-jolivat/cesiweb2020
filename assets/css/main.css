@@ -480,6 +480,12 @@ footer .footer-description p {
   display: block;
   text-align: center;
 }
+footer .footer-description h2 {
+  font-size: 16px;
+}
+footer .footer-description h2 i {
+  font-size: 15px;
+}
 footer .footer-description i {
   font-size: 30px;
   line-height: 0.2;
